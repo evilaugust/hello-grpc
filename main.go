@@ -31,7 +31,6 @@ func getConfig() Config {
 	return config
 }
 
-// Main entry point for application
 func main() {
 	config := getConfig()
 
