@@ -43,7 +43,7 @@ func main() {
 	server := grpc.NewServer()
 	hello.RegisterHelloServiceServer(server, &helloServiceServer{})
 
-	log.Printf("Listening for requests ...")
+	log.Printf("listening for insecure gRPC requests on port %s", config.Port)
 
 	if err := server.Serve(lis); err != nil {
 		log.Fatal(err)
