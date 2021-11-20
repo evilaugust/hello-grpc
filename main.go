@@ -23,7 +23,7 @@ func getConfig() Config {
 	defer file.Close()
 
 	if err != nil {
-		panic("Failed to load configuration.")
+		panic("failed to load configuration")
 	}
 
 	json.NewDecoder(file).Decode(&config)
@@ -51,7 +51,7 @@ func main() {
 }
 
 type helloServiceServer struct {
-	hello.UnimplementedHelloServiceServer
+	hello.HelloServiceServer
 }
 
 func (s *helloServiceServer) GetMessage(ctx context.Context, req *hello.HelloRequest) (*hello.HelloResponse, error) {
